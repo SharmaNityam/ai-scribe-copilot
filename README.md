@@ -5,7 +5,7 @@ Medical transcription app with real-time audio streaming and patient management.
 ## 📱 Download
 
 ### Android APK
-Download the latest Android APK from [GitHub Releases](https://github.com/SharmaNityam/ai-scribe-copilot/releases).
+Download the latest Android APK from [GitHub Releases](https://github.com/SharmaNityam/ai-scribe-copilot/releases) or [Drive Link](https://drive.google.com/file/d/12h1DXpc7le5WpNoMLjKsvqhNl0_K6mM-/view?usp=drive_link).
 
 The APK is automatically built and attached to each release when you create a new GitHub release.
 
