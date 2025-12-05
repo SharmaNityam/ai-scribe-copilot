@@ -11,6 +11,6 @@ services:
       - key: PORT
         value: 3000
       - key: BASE_URL
-        generateValue: true
+        value: https://ai-scribe-copilot-rev9.onrender.com
     healthCheckPath: /health
 

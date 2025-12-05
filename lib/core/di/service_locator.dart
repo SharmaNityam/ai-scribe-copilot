@@ -48,6 +48,7 @@ class ServiceLocator {
     _uploadService ??= UploadService(
       apiRepository: apiRepository,
       localStorage: localStorageRepository,
+      sessionService: sessionService,
     );
     return _uploadService!;
   }

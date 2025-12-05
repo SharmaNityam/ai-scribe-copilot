@@ -103,7 +103,7 @@ app.post('/v1/get-presigned-url', (req, res) => {
   }
 
   // Generate presigned URL (mock - in production, use real GCS)
-  const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.BASE_URL || 'https://ai-scribe-copilot-rev9.onrender.com';
   const gcsPath = `sessions/${sessionId}/chunk_${chunkNumber}.${mimeType ? mimeType.split('/')[1] : 'wav'}`;
   const url = `${baseUrl}/v1/upload-chunk/${sessionId}/${chunkNumber}`;
   const publicUrl = `${baseUrl}/public/${gcsPath}`;

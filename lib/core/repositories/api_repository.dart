@@ -16,8 +16,9 @@ class ApiRepository {
         _authToken = authToken,
         _dio = Dio(BaseOptions(
           baseUrl: baseUrl ?? ApiConfig.getBaseUrlForPlatform(),
-          connectTimeout: const Duration(seconds: 30),
-          receiveTimeout: const Duration(seconds: 30),
+          connectTimeout: const Duration(seconds: 120),
+          receiveTimeout: const Duration(seconds: 120),
+          sendTimeout: const Duration(seconds: 120),
           headers: {
             'Content-Type': 'application/json',
           },
@@ -144,6 +145,11 @@ class ApiRepository {
     }
     
     try {
+      final uri = Uri.parse(presignedUrl);
+      if (!uri.hasScheme || (!uri.scheme.startsWith('http'))) {
+        throw ArgumentError('Invalid presigned URL scheme: ${uri.scheme}');
+      }
+      
       final file = File(filePath);
       if (!await file.exists()) {
         throw FileSystemException('File not found', filePath);
@@ -155,6 +161,8 @@ class ApiRepository {
         throw Exception('Audio file is empty');
       }
 
+      AppLogger.debug('Uploading chunk to: $presignedUrl (${audioData.length} bytes)');
+
     await _dio.put(
       presignedUrl,
       data: audioData,
@@ -164,6 +172,7 @@ class ApiRepository {
           if (_authToken != null) 'Authorization': 'Bearer $_authToken',
         },
         responseType: ResponseType.plain,
+        validateStatus: (status) => status != null && status < 500,
       ),
     );
       

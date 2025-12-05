@@ -3,7 +3,7 @@
 # Script to check chunks on the backend
 # Usage: ./check-chunks.sh [sessionId]
 
-BASE_URL="${BASE_URL:-http://localhost:3000}"
+BASE_URL="${BASE_URL:-https://ai-scribe-copilot-rev9.onrender.com}"
 SESSION_ID="$1"
 
 if [ -z "$SESSION_ID" ]; then

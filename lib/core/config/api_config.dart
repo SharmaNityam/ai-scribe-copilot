@@ -1,5 +1,5 @@
 class ApiConfig {
-  static const String defaultBaseUrl = 'http://192.168.29.57:3000';
+  static const String defaultBaseUrl = 'https://ai-scribe-copilot-rev9.onrender.com';
   
   static String get baseUrl {
     const String envUrl = String.fromEnvironment('API_BASE_URL', defaultValue: '');

@@ -8,10 +8,10 @@ services:
     environment:
       - PORT=3000
       - NODE_ENV=production
-      - BASE_URL=http://localhost:3000
+      - BASE_URL=https://ai-scribe-copilot-rev9.onrender.com
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000/health"]
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "https://ai-scribe-copilot-rev9.onrender.com/health"]
       interval: 30s
       timeout: 10s
       retries: 3
