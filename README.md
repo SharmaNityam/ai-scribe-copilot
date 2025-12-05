@@ -15,8 +15,7 @@ The APK is automatically built and attached to each release when you create a ne
 Watch the iOS testing video showing all features: [iOS Demo Video](https://www.loom.com/share/df720c673e0340788fc8580c120028fe)
 
 ### Android Testing
-Android testing video is available in the [`and-video`](./and-video/) folder:
-- [android-testing.mp4](./and-video/android-testing.mp4)
+Watch the Android testing video: [Android Demo Video](https://youtu.be/y6vI4Kx3CX4)
 
 ## 🔧 Technical Details
 
@@ -48,19 +47,10 @@ Tools • Dart 3.9.2 • DevTools 2.48.0
 - Set up a database-backed storage solution to prevent data loss
 
 ### API Documentation
-API documentation is available in the [`backend/server.js`](./backend/server.js) file. The backend provides the following main endpoints:
-
-- `POST /v1/upload-session` - Create a new recording session
-- `POST /v1/get-presigned-url` - Get presigned URL for chunk upload
-- `PUT /v1/upload-chunk/:sessionId/:chunkNumber` - Upload audio chunk
-- `POST /v1/notify-chunk-uploaded` - Notify chunk upload completion
-- `GET /v1/all-session?userId={userId}` - Get all sessions for a user
-- `GET /v1/patient-details/:patientId` - Get patient details
-- `POST /v1/add-patient` - Add a new patient
-- `GET /health` - Health check endpoint
+📚 [API Documentation](https://docs.google.com/document/d/1hzfry0fg7qQQb39cswEychYMtBiBKDAqIg6LamAKENI/edit?usp=sharing)
 
 ### Postman Collection
-A Postman collection is not currently available. You can create one based on the API endpoints documented in [`backend/server.js`](./backend/server.js).
+🔧 [Postman Collection](https://drive.google.com/file/d/1rnEjRzH64ESlIi5VQekG525Dsf8IQZTP/view?usp=sharing)
 
 ## 🚀 Features
 
@@ -113,8 +103,4 @@ flutter build ios --release
 ## 📝 License
 
 This project is private and proprietary.
-
-## 🤝 Contributing
-
-This is a private project. For issues or questions, please contact the repository owner.
 
