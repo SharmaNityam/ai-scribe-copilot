@@ -41,8 +41,7 @@ jobs:
           tag_name: ${{ github.event.release.tag_name }}
           draft: false
           prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload APK as Artifact
         if: github.event_name == 'workflow_dispatch'
